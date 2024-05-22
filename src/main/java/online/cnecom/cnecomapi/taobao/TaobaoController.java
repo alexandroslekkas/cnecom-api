@@ -22,7 +22,7 @@ public class TaobaoController {
         String url = "https://api.kongcrdv.com/taobao/api_call.php?api_name=item_search&q=" + query + "&page=1&key=HaulBuy";
         ItemSearchResponse response = restTemplate.getForObject(url, ItemSearchResponse.class);
         if (response != null && response.getItems() != null) {
-            return response.getItems();
+            return response.getItems().getItemList();
         } else {
             return List.of();
         }
