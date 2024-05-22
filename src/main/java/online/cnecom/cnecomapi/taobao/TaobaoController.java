@@ -25,7 +25,6 @@ public class TaobaoController {
             return response.getItems().getItemList();
         } else {
             return List.of();
-            // Notes
         }
     }
 }
