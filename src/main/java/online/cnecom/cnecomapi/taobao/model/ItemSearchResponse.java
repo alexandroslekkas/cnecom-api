@@ -8,32 +8,16 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ItemSearchResponse {
     @JsonProperty("items")
-    private Items items;
+    private List<Item> items;
 
     // Other fields can be added as needed, e.g., error_code, reason, etc.
 
-    public Items getItems() {
+    public List<Item> getItems() {
         return items;
     }
 
-    public void setItems(Items items) {
+    public void setItems(List<Item> items) {
         this.items = items;
-    }
-
-    @JsonIgnoreProperties(ignoreUnknown = true)
-    public static class Items {
-        @JsonProperty("item")
-        private List<Item> itemList;
-
-        public List<Item> getItemList() {
-            return itemList;
-        }
-
-        public void setItemList(List<Item> itemList) {
-            this.itemList = itemList;
-        }
-
-        // Other fields can be added as needed, e.g., page, total_results, etc.
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
